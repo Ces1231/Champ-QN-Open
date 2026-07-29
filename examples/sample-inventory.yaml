@@ -1,0 +1,66 @@
+# Sample inventory in YAML form — equivalent content to sample-inventory.json,
+# provided to demonstrate both accepted upload formats.
+inventory_name: "Sample Organization — Illustrative Inventory (YAML)"
+assets:
+  - id: legacy-web-01.example.internal
+    category: Web server
+    algorithms:
+      - TLS1.2
+      - RSA-2048
+      - SHA-1
+      - AES-128-CBC
+    notes: "Public-facing legacy web server, scheduled for decommission."
+
+  - id: vpn-gateway-east.example.internal
+    category: VPN gateway
+    algorithms:
+      - ECDHE
+      - ECDSA-P256
+      - AES-256-GCM
+      - SHA-256
+    notes: "Site-to-site VPN concentrator."
+
+  - id: vpn-gateway-west-hybrid.example.internal
+    category: VPN gateway
+    algorithms:
+      - X25519+ML-KEM-768
+      - ML-DSA-65
+      - AES-256-GCM
+    notes: "Pilot hybrid post-quantum VPN gateway."
+
+  - id: internal-api-gateway.example.internal
+    category: API gateway
+    algorithms:
+      - TLS1.3
+      - AES-256-GCM
+      - SHA-384
+    notes: "Internal service mesh ingress."
+
+  - id: quantum-safe-file-service.example.internal
+    category: File transfer service
+    algorithms:
+      - ML-KEM-1024
+      - ML-DSA-87
+      - AES-256-GCM
+      - SHA-3-256
+    notes: "Post-quantum reference deployment, evaluation only."
+
+  - id: legacy-signing-service.example.internal
+    category: Code signing service
+    algorithms:
+      - RSA-1024
+      - SHA-1
+    notes: "Deprecated signing pipeline for a retired product line."
+
+  - id: cert-authority-internal.example.internal
+    category: Certificate authority
+    algorithms:
+      - X.509
+      - Diffie-Hellman
+    notes: "Root CA; certificate algorithm inventory not yet fully documented."
+
+  - id: iot-telemetry-gateway.example.internal
+    category: IoT gateway
+    algorithms:
+      - AcmeProto-CipherX
+    notes: "Vendor-proprietary protocol; documentation pending from vendor."
