@@ -1,0 +1,35 @@
+CHAMP-QN-public
+Copyright (c) 2026 Carnell Smith / Champtron Systems LLC
+
+This product includes the CHAMP-QN Crypto Readiness Scanner, an
+independently usable open-source reference component, along with public
+documentation, examples, and screenshots for the CHAMP-QN platform.
+
+Licensed under the MIT License. See the LICENSE file for the full license
+text.
+
+--------------------------------------------------------------------------
+
+Third-party notices
+
+This software depends on the following third-party open-source packages at
+runtime. Each is used under its own license (not redistributed in source
+form within this repository); see each project's own repository for its
+full license text.
+
+- FastAPI (MIT License) — https://github.com/fastapi/fastapi
+- Starlette (BSD-3-Clause) — https://github.com/encode/starlette
+- Uvicorn (BSD-3-Clause) — https://github.com/encode/uvicorn
+- Pydantic (MIT License) — https://github.com/pydantic/pydantic
+- PyYAML (MIT License) — https://github.com/yaml/pyyaml
+- Jinja2 (BSD-3-Clause) — https://github.com/pallets/jinja
+- python-multipart (Apache License 2.0) — https://github.com/Kludex/python-multipart
+
+Development-time-only tooling (not included in the distributed container
+image runtime layer): pytest, ruff, black, mypy, bandit, pip-audit. Each is
+used under its own respective open-source license.
+
+--------------------------------------------------------------------------
+
+This NOTICE file does not itself constitute a license grant. See LICENSE
+for the license governing this repository's own original content.
