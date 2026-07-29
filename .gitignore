@@ -4,3 +4,36 @@ package.json
 package-lock.json
 convert_logo.js
 logo_preview.html
+
+# Python
+__pycache__/
+*.py[cod]
+*.egg-info/
+.eggs/
+build/
+dist/
+.venv/
+venv/
+
+# Test / lint / type-check artifacts
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.coverage
+.coverage.*
+htmlcov/
+
+# Environment
+.env
+.env.*
+!.env.example
+
+# Reference-app runtime data (persistence is off by default; this covers
+# the opt-in data directory if ever enabled locally)
+/data/
+
+# OS / editor
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
