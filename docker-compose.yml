@@ -1,0 +1,20 @@
+services:
+  champ-qn-crypto-scanner:
+    build: .
+    container_name: champ-qn-crypto-scanner
+    ports:
+      - "${CHAMPQN_HOST_PORT:-8080}:${CHAMPQN_PORT:-8000}"
+    environment:
+      CHAMPQN_PORT: "${CHAMPQN_PORT:-8000}"
+      CHAMPQN_HOST: "0.0.0.0"
+      CHAMPQN_MAX_UPLOAD_BYTES: "${CHAMPQN_MAX_UPLOAD_BYTES:-2097152}"
+      CHAMPQN_MAX_ASSETS: "${CHAMPQN_MAX_ASSETS:-2000}"
+      CHAMPQN_MAX_ALGORITHMS_PER_ASSET: "${CHAMPQN_MAX_ALGORITHMS_PER_ASSET:-200}"
+      CHAMPQN_PERSIST_UPLOADS: "${CHAMPQN_PERSIST_UPLOADS:-false}"
+      CHAMPQN_LOG_LEVEL: "${CHAMPQN_LOG_LEVEL:-info}"
+    read_only: true
+    tmpfs:
+      - /tmp
+    security_opt:
+      - no-new-privileges:true
+    restart: unless-stopped
